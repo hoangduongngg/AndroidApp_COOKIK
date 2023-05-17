@@ -6,6 +6,7 @@ COOKIK APP
     I always wonder what to cook today? 
     So, i create an android app to decided it! 
     Maybe, there're "sườn xào chua ngọt" and "Rau muống luộc"!
+    - COOKIK - Cook-ik: It's mean "Nấu ăn đi!" in Vietnamese, but it sounds more fun than "Let's cook!". My home-mate came up wwith that name when I told her about my idea. 
 
 2. Scope:
     - Mini project for a university subject. 

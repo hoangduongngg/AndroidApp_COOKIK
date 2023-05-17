@@ -4,7 +4,7 @@ COOKIK APP
 1. INTRODUCE
     - Hi, I'm a technology student and 
     I always wonder what to cook today? 
-    So, i create an android app to decided! 
+    So, i create an android app to decided it! 
     Maybe, there're "sườn xào chua ngọt" and "Rau muống luộc"!
 
 2. Scope:

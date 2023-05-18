@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/gmail"
+        android:layout_width="300dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="112dp"
+        android:ems="10"
+        android:fontFamily="@font/be_vietnam"
+        android:inputType="textEmailAddress"
+        android:hint="Email"
+        android:textColor="#969696"
+        android:textColorHint="#707070"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="300dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:fontFamily="@font/be_vietnam"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="#4E4E4E"
+        android:textColorHint="#969696"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gmail" />
+
+    <Button
+        android:id="@+id/bt_signup"
+        android:layout_width="302dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="68dp"
+        android:background="@color/black"
+        android:fontFamily="@font/be_vietnam_semibold"
+        android:text="Sign Up"
+        android:textColor="#D7D7D7"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        tools:ignore="@drawable/icons8_facebook,MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/be_vietnam_semibold"
+        android:text="Sign Up"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/gmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.658"
+        tools:ignore="MissingConstraints" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView3"-->
+<!--        android:layout_width="120dp"-->
+<!--        android:layout_height="30dp"-->
+<!--        android:layout_marginTop="24dp"-->
+<!--        android:fontFamily="@font/be_vietnam"-->
+<!--        android:text="Forgot password?"-->
+<!--        android:textColor="#3F51B5"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/password"-->
+<!--        app:layout_constraintHorizontal_bias="1.0"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/password"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/password"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+
+    <ImageButton
+        android:id="@+id/imageButton8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:contentDescription="Facebook"
+        app:layout_constraintEnd_toEndOf="@+id/bt_signup"
+        app:layout_constraintHorizontal_bias="0.18"
+        app:layout_constraintStart_toStartOf="@+id/bt_signup"
+        app:layout_constraintTop_toBottomOf="@+id/bt_signup"
+        app:srcCompat="@drawable/icons8_facebook"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/imageButton10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:contentDescription="Twitter"
+        app:layout_constraintEnd_toEndOf="@+id/bt_signup"
+        app:layout_constraintStart_toStartOf="@+id/bt_signup"
+        app:layout_constraintTop_toBottomOf="@+id/bt_signup"
+        app:srcCompat="@drawable/icons8_twitter_circled"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/imageButton11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:contentDescription="Behance"
+        app:layout_constraintEnd_toEndOf="@+id/bt_signup"
+        app:layout_constraintHorizontal_bias="0.823"
+        app:layout_constraintStart_toStartOf="@+id/bt_signup"
+        app:layout_constraintTop_toBottomOf="@+id/bt_signup"
+        app:srcCompat="@drawable/icons8_behance"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/login_now"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="84dp"
+        android:background="#00FFFFFF"
+        android:fontFamily="@font/be_vietnam_semibold"
+        android:text="I already have an account. Login now!"
+        android:textColor="#8F8F8F"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton10"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

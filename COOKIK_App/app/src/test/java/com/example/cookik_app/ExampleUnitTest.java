@@ -1,4 +1,4 @@
-package com.example.cafeshop;
+package com.example.cookik_app;
 
 import org.junit.Test;
 

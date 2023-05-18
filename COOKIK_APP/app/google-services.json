@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "319593432960",
+    "project_id": "cookik-app",
+    "storage_bucket": "cookik-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:319593432960:android:d29cfbe9256b63e79ce365",
+        "android_client_info": {
+          "package_name": "com.example.cookik_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "319593432960-ns31ig90ulb7kpvqdpl9nq97vl1cqgb1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNrMmmPDFSjXhyO4fL-D0BwMp90iKUIo8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "319593432960-3a68oude1vh2d6c09ip44q11r2hadhpf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

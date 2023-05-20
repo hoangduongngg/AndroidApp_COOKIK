@@ -11,7 +11,8 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface APIService {
-    String url = "http://localhost:8081/";
+    String url = "https://4fe7-2402-800-61ac-ad68-6d5f-d40f-7aa7-60cb.ngrok-free.app/";
+
     Gson GSON = new GsonBuilder()
             .setDateFormat("yyyy-MM-dd")
             .create();
@@ -22,6 +23,6 @@ public interface APIService {
             .create(APIService.class);
     @GET("product")
     Call<Product> getProductById(
-            @Query("id") Integer id
+            @Query("id") int id
         );
 }

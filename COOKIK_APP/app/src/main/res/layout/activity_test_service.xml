@@ -15,4 +15,13 @@
         android:text="text_service"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bt_testCallAPI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="111dp"
+        android:text="CALL API"
+        app:layout_constraintStart_toStartOf="@+id/text_service"
+        app:layout_constraintTop_toBottomOf="@+id/text_service" />
 </androidx.constraintlayout.widget.ConstraintLayout>

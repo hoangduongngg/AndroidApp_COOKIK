@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">COOKIK_App</string>
+    <string name="app_name">GOOD_READ</string>
+    <string-array name="category">
+        <item>Home</item>
+        <item>Info</item>
+        <item>Search</item>
+        <item>Logout</item>
+    </string-array>
 </resources>

@@ -1,11 +1,9 @@
 <resources>
     <string name="app_name">GOOD_READ</string>
     <string-array name="category">
-        <item>Mua sam</item>
-        <item>Tien an</item>
-        <item>Tien nha</item>
-        <item>Tien dien</item>
-        <item>Tien nuoc</item>
+        <item>Home</item>
+        <item>Info</item>
+        <item>Search</item>
         <item>Logout</item>
     </string-array>
 </resources>

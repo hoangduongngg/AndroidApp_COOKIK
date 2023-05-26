@@ -32,6 +32,22 @@ public class BookAdapter {
         return book;
     }
 
+    public BookEntity adapter_toEntity (Book book) {
+        BookEntity bookEntity = new BookEntity();
+        if (book.getId()!=null) {
+            bookEntity.setId(book.getId());
+        }
+        bookEntity.setName(book.getName());
+        bookEntity.setImg(book.getImg());
+        bookEntity.setRate(book.getRate());
+        bookEntity.setAuthor(book.getAuthor());
+        bookEntity.setCreate_date(book.getCreate_date());
+        bookEntity.setRead_date(book.getRead_date());
+        bookEntity.setReview(book.getReview());
+        bookEntity.setShelfId(book.getShelf().getId());
+        return bookEntity;
+    }
+
     private Shelf getShelfById(Integer shelfId) {
         Shelf shelf = new Shelf();
 

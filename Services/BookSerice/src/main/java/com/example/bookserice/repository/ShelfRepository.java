@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 @Repository
 public interface ShelfRepository extends JpaRepository<Shelf, Integer> {
+    Shelf findByName(String name);
 }

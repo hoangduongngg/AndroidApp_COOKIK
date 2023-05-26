@@ -67,7 +67,9 @@ public class HomeActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(HomeActivity.this, AddActivity.class);
+                startActivity(intent);
+//                finish();
             }
         });
         //End of Add Button Here

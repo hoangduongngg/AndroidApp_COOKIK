@@ -13,6 +13,14 @@ public class Shelf {
         this.name = name;
     }
 
+    @Override
+    public String toString() {
+        return "Shelf{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
+
     public Integer getId() {
         return id;
     }

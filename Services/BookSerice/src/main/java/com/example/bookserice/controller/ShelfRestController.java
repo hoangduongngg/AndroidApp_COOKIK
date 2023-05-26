@@ -34,4 +34,10 @@ public class ShelfRestController {
         Shelf shelf = shelfRepository.findById(id).get();
         return ResponseEntity.status(HttpStatus.OK).body(shelf);
     }
+
+    @PostMapping("/")
+    public ResponseEntity<Shelf> getByName (@RequestParam String name) {
+        Shelf shelf = shelfRepository.findByName(name);
+        return ResponseEntity.status(HttpStatus.OK).body(shelf);
+    }
 }

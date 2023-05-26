@@ -10,4 +10,5 @@ import java.util.List;
 @Service
 public interface BookService {
     List<Book> getListByObject (BookRequest bookRequest);
+    Book addBook(Book book);
 }

@@ -110,4 +110,17 @@ public class Book {
     public void setShelf(Shelf shelf) {
         this.shelf = shelf;
     }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", '" + name + '\'' +
+                ", '" + author + '\'' +
+                ", " + create_date +
+                ", " + read_date +
+                ", '" + review + '\'' +
+                ", " + shelf +
+                '}';
+    }
 }

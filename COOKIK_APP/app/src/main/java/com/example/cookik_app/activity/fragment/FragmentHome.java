@@ -48,7 +48,6 @@ public class FragmentHome extends Fragment implements RecycleViewAdapter.ItemLis
         super.onViewCreated(view, savedInstanceState);
         recyclerView = view.findViewById(R.id.recycleView);
         txtHome = view.findViewById(R.id.txtHome);
-
         adapter = new RecycleViewAdapter();
 
         APIService.apiService.getListBook().enqueue(new Callback<List<Book>>() {

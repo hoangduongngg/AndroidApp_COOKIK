@@ -1,6 +1,7 @@
 package com.example.cookik_app.activity.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.cookik_app.API.APIService;
 import com.example.cookik_app.API.BookController;
 import com.example.cookik_app.R;
+import com.example.cookik_app.activity.home.DetailActivity;
 import com.example.cookik_app.adapter.RecycleViewAdapter;
 import com.example.cookik_app.model.Book;
 import com.example.cookik_app.model.Product;
@@ -34,7 +36,7 @@ public class FragmentHome extends Fragment implements RecycleViewAdapter.ItemLis
     private RecycleViewAdapter adapter;
     private RecyclerView recyclerView;
     private BookController controller;
-
+    List<Book> list = new ArrayList<>();
     TextView txtHome;
     @Nullable
     @Override
@@ -54,7 +56,7 @@ public class FragmentHome extends Fragment implements RecycleViewAdapter.ItemLis
             @Override
             public void onResponse(Call<List<Book>> call, Response<List<Book>> response) {
                 if (response.body()!= null) {
-                    List<Book> list = response.body();
+                    list = response.body();
 
                     adapter.setList(list);
                     adapter.setContext(requireContext());
@@ -79,7 +81,11 @@ public class FragmentHome extends Fragment implements RecycleViewAdapter.ItemLis
 
     @Override
     public void onItemClick(View view, int position) {
-
+        Intent intent = new Intent(getActivity(), DetailActivity.class);
+        Book book = adapter.getItem(position);
+        intent.putExtra("book", book);
+        startActivity(intent);
+//        Toast.makeText(getContext(), position, Toast.LENGTH_SHORT).show();
     }
 }
 

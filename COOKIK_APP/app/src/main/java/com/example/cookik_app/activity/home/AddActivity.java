@@ -9,8 +9,10 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,6 +35,7 @@ import retrofit2.Response;
 
 public class AddActivity extends AppCompatActivity {
     EditText name, img, author, review;
+    Spinner sp_shelf;
     Button bt_add;
     Book book;
     private void init() {
@@ -41,6 +44,12 @@ public class AddActivity extends AppCompatActivity {
         img = findViewById(R.id.img);
         author = findViewById(R.id.author);
         review = findViewById(R.id.review);
+//        sp_shelf.setAdapter(new ArrayAdapter<String>(
+//                this,
+//                R.layout.item_spinner,
+//                getResources().getStringArray(R.array.shelf
+//                )));
+        sp_shelf = findViewById(R.id.sp_shelf);
     }
 
     private void init_book() {
@@ -52,7 +61,8 @@ public class AddActivity extends AppCompatActivity {
         book.setCreate_date(null);
         book.setRead_date(null);
         book.setReview(review.getText().toString());
-        book.setShelf(new Shelf("Read"));
+        book.setShelf(new Shelf(sp_shelf.getSelectedItem().toString()));
+
     }
 
     @Override

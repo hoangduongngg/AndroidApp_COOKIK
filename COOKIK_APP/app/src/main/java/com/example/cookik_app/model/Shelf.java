@@ -1,6 +1,8 @@
 package com.example.cookik_app.model;
 
-public class Shelf {
+import java.io.Serializable;
+
+public class Shelf implements Serializable {
     private Integer id;
     private String name;
 

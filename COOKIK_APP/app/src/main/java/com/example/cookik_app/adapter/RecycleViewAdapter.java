@@ -33,7 +33,6 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
 
     public RecycleViewAdapter(List<Book> list) {
         this.list = list;
-        notifyDataSetChanged();
     }
 
     public void setList(List<Book> list) {

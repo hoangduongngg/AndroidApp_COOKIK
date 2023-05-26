@@ -1,8 +1,9 @@
 package com.example.cookik_app.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Book {
+public class Book implements Serializable {
     private Integer id;
     private String name;
     private String img;
@@ -109,5 +110,18 @@ public class Book {
 
     public void setShelf(Shelf shelf) {
         this.shelf = shelf;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", '" + name + '\'' +
+                ", '" + author + '\'' +
+                ", " + create_date +
+                ", " + read_date +
+                ", '" + review + '\'' +
+                ", " + shelf +
+                '}';
     }
 }

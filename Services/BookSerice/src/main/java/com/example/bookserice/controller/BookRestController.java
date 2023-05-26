@@ -64,6 +64,21 @@ public class BookRestController {
         return ResponseEntity.status(HttpStatus.OK).body(books);
     }
 
+    @PostMapping(value = "/add", consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Book> addBook (
+            @RequestBody Book book
+    ) {
+        try {
+            System.out.println(book);
+            book = bookService.addBook(book);
+            System.out.println("After: " + book);
+
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+        return ResponseEntity.status(HttpStatus.OK).body(book);
+    }
+
 //    @PostMapping("")
 //    public ResponseEntity<List<Book>> getByObject (
 //            @RequestBody BookRequest bookRequest) {

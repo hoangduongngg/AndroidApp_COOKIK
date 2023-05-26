@@ -4,6 +4,9 @@ plugins {
 }
 
 android {
+
+//    classpath 'com.android.tools.build:gradle:4.1.0'
+
     namespace 'com.example.cookik_app'
     compileSdk 33
 

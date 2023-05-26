@@ -25,10 +25,6 @@ public interface APIService {
             .addConverterFactory(GsonConverterFactory.create(GSON))
             .build()
             .create(APIService.class);
-//    @GET("product")
-//    Call<Product> getProductById(
-//            @Query("id") int id
-//        );
 
     @GET("api/book")
     Call<List<Book>> getListBook (

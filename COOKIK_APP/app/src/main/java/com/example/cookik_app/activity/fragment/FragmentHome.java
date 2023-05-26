@@ -85,7 +85,6 @@ public class FragmentHome extends Fragment implements RecycleViewAdapter.ItemLis
         Book book = adapter.getItem(position);
         intent.putExtra("book", book);
         startActivity(intent);
-//        Toast.makeText(getContext(), position, Toast.LENGTH_SHORT).show();
     }
 }
 

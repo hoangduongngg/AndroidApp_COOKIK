@@ -44,11 +44,6 @@ public class AddActivity extends AppCompatActivity {
         img = findViewById(R.id.img);
         author = findViewById(R.id.author);
         review = findViewById(R.id.review);
-//        sp_shelf.setAdapter(new ArrayAdapter<String>(
-//                this,
-//                R.layout.item_spinner,
-//                getResources().getStringArray(R.array.shelf
-//                )));
         sp_shelf = findViewById(R.id.sp_shelf);
     }
 

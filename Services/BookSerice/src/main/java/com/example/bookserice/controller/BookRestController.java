@@ -34,10 +34,19 @@ public class BookRestController {
         Book book = adapter.adapter(bookRepository.findById(id).get());
         return ResponseEntity.status(HttpStatus.OK).body(book);
     }
+//    @PostMapping("/key")
+//    public ResponseEntity<List<Book>> getByKey (
+//            @RequestParam String key
+//    ) {
+//        List<Book> books = adapter.adapter_list(bookRepository.findByNameContainsAndAuthorContains(key));
+//        return ResponseEntity.status(HttpStatus.OK).body(books);
+//    }
+
     @PostMapping("/name")
     public ResponseEntity<List<Book>> getByName (
             @RequestParam String name
     ) {
+        System.out.println(name);
         List<Book> books = adapter.adapter_list(bookRepository.findByNameContains(name));
         return ResponseEntity.status(HttpStatus.OK).body(books);
     }

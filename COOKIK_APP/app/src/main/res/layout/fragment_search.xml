@@ -5,32 +5,40 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-    <SearchView
+<!--    <SearchView-->
+<!--        android:id="@+id/search"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:queryHint="Search"-->
+<!--        android:iconifiedByDefault="false"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"/>-->
+
+    <EditText
         android:id="@+id/search"
         android:layout_marginTop="20dp"
-        android:queryHint="Search"
-        android:iconifiedByDefault="false"
+        android:hint="Search name or author"
         android:layout_width="match_parent"
+        android:layout_margin="30dp"
         android:layout_height="wrap_content"/>
 
 <!--    Chon thoi gian-->
-    <EditText
-        android:id="@+id/eFrom"
-        android:hint="From"
-        android:textSize="12dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+<!--    <EditText-->
+<!--        android:id="@+id/eFrom"-->
+<!--        android:hint="From"-->
+<!--        android:textSize="12dp"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        android:layout_marginRight="20dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"/>-->
 
-    <EditText
-        android:id="@+id/eTo"
-        android:hint="To"
-        android:textSize="12dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+<!--    <EditText-->
+<!--        android:id="@+id/eTo"-->
+<!--        android:hint="To"-->
+<!--        android:textSize="12dp"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        android:layout_marginRight="20dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"/>-->
     <!--    End of Chon thoi gian-->
 <!--    Phân loại và nút Tìm-->
     <LinearLayout
@@ -41,15 +49,16 @@
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp">
 
-        <Spinner
-            android:id="@+id/spinner"
-            android:layout_weight="1"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+<!--        <Spinner-->
+<!--            android:id="@+id/spinner"-->
+<!--            android:layout_weight="1"-->
+<!--            android:entries="@array/shelf"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"/>-->
 
         <Button
-            android:id="@+id/btSearch"
+            android:id="@+id/bt_search"
             android:layout_weight="1"
             android:background="@drawable/button"
             android:text="Search"

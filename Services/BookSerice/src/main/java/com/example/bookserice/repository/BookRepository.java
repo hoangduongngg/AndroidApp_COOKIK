@@ -13,6 +13,8 @@ public interface BookRepository extends JpaRepository<BookEntity, Integer> {
     List<BookEntity> findByNameContains (String name);
     List<BookEntity> findByAuthorContains(String author);
 
+//    List<BookEntity> findByNameContainsAndAuthorContains (String key, String kee);
+
     List<BookEntity> findByRate (Integer rate);
     List<BookEntity> findByNameLikeAndRateAndAuthorLikeAndShelfId (
             String name,

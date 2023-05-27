@@ -30,7 +30,7 @@ public interface APIService {
     Call<List<Book>> getListBook (
     );
 
-    @GET("api/book/name")
+    @POST("api/book/name")
     Call<List<Book>> getListBookByName (
             @Query("name") String name
     );
@@ -49,4 +49,6 @@ public interface APIService {
     Call<Book> deleteBook(
             @Body Book book
     );
+
+
 }

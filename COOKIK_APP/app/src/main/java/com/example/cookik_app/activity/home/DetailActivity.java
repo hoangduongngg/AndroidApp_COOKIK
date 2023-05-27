@@ -12,8 +12,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.cookik_app.API.APIService;
 import com.example.cookik_app.R;
 import com.example.cookik_app.model.Book;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class DetailActivity extends AppCompatActivity implements View.OnClickListener {
     private TextView name, author, shelf, review;
@@ -74,13 +79,26 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View view) {
         if (view==bt_update) {
-            Toast.makeText(this, "UPDATE", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(this, UpdateActivity.class);
             intent.putExtra("book", book);
             startActivity(intent);
         }
         if (view==bt_delete) {
-            Toast.makeText(this, "DELETE", Toast.LENGTH_SHORT).show();
+            APIService.apiService.deleteBook(book).enqueue(new Callback<Book>() {
+                @Override
+                public void onResponse(Call<Book> call, Response<Book> response) {
+                    if (response.isSuccessful()) {
+                        Toast.makeText(getApplicationContext(), "Delete book successful.", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(DetailActivity.this, HomeActivity.class);
+                        startActivity(intent);
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<Book> call, Throwable t) {
+                    Toast.makeText(getApplicationContext(), t.toString(), Toast.LENGTH_SHORT).show();
+                }
+            });
         }
 //        if (view==bt_back) {
 //            Toast.makeText(this, "BACK", Toast.LENGTH_SHORT).show();

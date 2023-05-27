@@ -48,7 +48,6 @@ public class HomeActivity extends AppCompatActivity {
             finish();
         } else {
 //            hello_user.setText(user.getEmail());
-            Toast.makeText(getApplicationContext(), "Welcome!" + user.getEmail(), Toast.LENGTH_SHORT).show();
 
         }
 

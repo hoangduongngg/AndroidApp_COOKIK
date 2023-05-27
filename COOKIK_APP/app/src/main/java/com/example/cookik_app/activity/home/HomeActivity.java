@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.cookik_app.R;
 import com.example.cookik_app.activity.login.LoginActivity;
@@ -40,14 +41,16 @@ public class HomeActivity extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
 //        bt_logout = findViewById(R.id.bt_logout);
 //        hello_user = findViewById(R.id.hello_user);
-//        user = auth.getCurrentUser();
-//        if (user == null) {
-//            Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-//            startActivity(intent);
-//            finish();
-//        } else {
+        user = auth.getCurrentUser();
+        if (user == null) {
+            Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+            startActivity(intent);
+            finish();
+        } else {
 //            hello_user.setText(user.getEmail());
-//        }
+            Toast.makeText(getApplicationContext(), "Welcome!" + user.getEmail(), Toast.LENGTH_SHORT).show();
+
+        }
 
 //        bt_logout.setOnClickListener(new View.OnClickListener() {
 //            @Override

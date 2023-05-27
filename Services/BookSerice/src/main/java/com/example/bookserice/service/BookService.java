@@ -11,4 +11,9 @@ import java.util.List;
 public interface BookService {
     List<Book> getListByObject (BookRequest bookRequest);
     Book addBook(Book book);
+    Book update (Book book);
+    Book delete (Book book);
+
+
+
 }

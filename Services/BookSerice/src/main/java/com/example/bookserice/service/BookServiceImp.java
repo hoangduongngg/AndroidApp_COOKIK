@@ -50,6 +50,23 @@ public class BookServiceImp implements BookService{
         return book;
     }
 
+    @Override
+    public Book update(Book book) {
+        System.out.println("Update: " + book);
+        book.setShelf(shelfRepository.findByName(book.getShelf().getName()));
+        bookRepository.save(adapter.adapter_toEntity(book));
+        return book;
+    }
+
+    @Override
+    public Book delete(Book book) { //Khong tra ve book nhung set book cho nhanh, tra ve void/boolean thi chuan hon
+        System.out.println("Delete: " + book);
+//        book.setShelf(shelfRepository.findByName(book.getShelf().getName()));
+//        bookRepository.save(adapter.adapter_toEntity(book));
+        bookRepository.deleteById(book.getId());
+        return book;
+    }
+
     private Date getCurrentDate() {
         long millis = System.currentTimeMillis();
         java.sql.Date date = new java.sql.Date(millis);

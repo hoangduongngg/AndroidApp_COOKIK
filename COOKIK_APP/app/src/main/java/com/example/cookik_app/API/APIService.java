@@ -16,7 +16,7 @@ import retrofit2.http.POST;
 import retrofit2.http.Query;
 
 public interface APIService {
-    String url = "https://01d3-2405-4802-1d79-87e0-f98d-2498-e2ef-f53.ngrok-free.app/";
+    String url = "https://1168-2405-4802-1d79-87e0-e59d-88b-c0e5-793f.ngrok-free.app/";
     Gson GSON = new GsonBuilder()
             .setDateFormat("yyyy-MM-dd")
             .create();
@@ -37,6 +37,16 @@ public interface APIService {
 
     @POST("api/book/add")
     Call<Book> addBook(
+            @Body Book book
+    );
+
+    @POST("api/book/update")
+    Call<Book> updateBook(
+            @Body Book book
+    );
+
+    @POST("api/book/delete")
+    Call<Book> deleteBook(
             @Body Book book
     );
 }

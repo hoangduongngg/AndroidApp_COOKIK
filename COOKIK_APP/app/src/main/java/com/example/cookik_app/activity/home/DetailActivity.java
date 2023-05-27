@@ -75,6 +75,9 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
     public void onClick(View view) {
         if (view==bt_update) {
             Toast.makeText(this, "UPDATE", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, UpdateActivity.class);
+            intent.putExtra("book", book);
+            startActivity(intent);
         }
         if (view==bt_delete) {
             Toast.makeText(this, "DELETE", Toast.LENGTH_SHORT).show();

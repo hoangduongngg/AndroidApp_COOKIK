@@ -79,6 +79,34 @@ public class BookRestController {
         return ResponseEntity.status(HttpStatus.OK).body(book);
     }
 
+    @PostMapping(value = "/update", consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Book> update (
+            @RequestBody Book book
+    ) {
+        try {
+            System.out.println(book);
+            book = bookService.update(book);
+            System.out.println("Update: " + book);
+
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+        return ResponseEntity.status(HttpStatus.OK).body(book);
+    }
+
+    @PostMapping(value = "/delete", consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Book> delete (
+            @RequestBody Book book
+    ) {
+        try {
+            System.out.println(book);
+            book = bookService.delete(book);
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+        return ResponseEntity.status(HttpStatus.OK).body(book);
+    }
+
 //    @PostMapping("")
 //    public ResponseEntity<List<Book>> getByObject (
 //            @RequestBody BookRequest bookRequest) {
